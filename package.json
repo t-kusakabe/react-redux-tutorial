@@ -4,11 +4,15 @@
   "main": "index.js",
   "author": "t-kusakabe <ttmac0704@gmail.com>",
   "license": "MIT",
+  "scripts": {
+    "build": "browserify src/index.js -o dist/bundle.js -t [ babelify --presets [ react es2015 ] ]"
+  },
   "dependencies": {
     "react": "^16.1.1",
     "react-dom": "^16.1.1"
   },
   "devDependencies": {
+    "babel-core": "^6.26.0",
     "babel-preset-es2015": "^6.24.1",
     "babel-preset-react": "^6.24.1",
     "babelify": "^8.0.0",
